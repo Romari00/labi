@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Rectangle1 {
     public int x1;
     public int y1;
@@ -13,6 +15,40 @@ public class Rectangle1 {
         this.y2 = y2;
         this.dx = dx;
         this.dy = dy;
+    }
+
+    public int getDx() {
+        return dx;
+    }
+
+    public int getDy() {
+        return dy;
+    }
+
+    public void reverseDx() {
+        dx = -dx;
+    }
+
+    public void reverseDy() {
+        dy = -dy;
+    }
+
+
+
+    public int getX1() {
+        return x1;
+    }
+
+    public int getX2() {
+        return x2;
+    }
+
+    public int getY1() {
+        return y1;
+    }
+
+    public int getY2() {
+        return y2;
     }
 
     public Rectangle1(int width, int height) {
@@ -45,6 +81,12 @@ public class Rectangle1 {
 //                y2 > rect2.y2 ? rect2.y2 : y2
 //        );
 //    }
+
+    public void draw(Graphics g) {
+        // реализация отрисовки
+        g.setColor(Color.black);
+        g.drawRect(x1, y1, x2 - x1, y2 - y1);
+    }
 
     public void rect_print() {
         System.out.println("x1 =" + x1 + " y1 =" + y1 + " x2 =" + x2 + " y2 =" + y2 + "\n");
