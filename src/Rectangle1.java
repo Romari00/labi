@@ -88,6 +88,10 @@ public class Rectangle1 {
         g.drawRect(x1, y1, x2 - x1, y2 - y1);
     }
 
+    public boolean contains(Point point) {
+        return point.x >= x1 && point.x <= x2 && point.y >= y1 && point.y <= y2;
+    }
+
     public void rect_print() {
         System.out.println("x1 =" + x1 + " y1 =" + y1 + " x2 =" + x2 + " y2 =" + y2 + "\n");
     }
